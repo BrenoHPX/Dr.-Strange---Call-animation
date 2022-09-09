@@ -1,0 +1,333 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-size:100% 100%;
+    background-image: radial-gradient(#1b0200, black);
+}
+
+.bodyDiv{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    
+    animation-name: bgChange;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+}
+
+.title{
+    width: 0%;
+    height: 0%;
+    animation-name: titleAct;
+    animation-duration: 5s;
+    animation-iteration-count:1;
+    animation-delay: 9s;
+    z-index: 2;
+    animation-timing-function:ease-in;
+}
+
+.drStrangePng1{
+    align-self:center;
+    position: fixed;
+    left: 5vw;
+    top: 10vh;
+    width: 40%;
+    /* opacity: 0.8; */
+    opacity: 0;
+    z-index: 2;
+    
+    animation-name: drStrangePng;
+    animation-duration: 5s;
+    animation-delay: 4.8s;    
+}
+
+.drStrangePng2{
+    transform: scaleX(-1);
+    border-radius: 150px;
+
+    align-self:center;
+    position: fixed;
+    right: 10vw;
+    width: 30%;
+    opacity: 0;
+    /* opacity: 0.9; */
+    z-index: 2;
+    
+    animation-name: drStrangePng;
+    animation-duration: 4.9s;
+    animation-delay: 5s;
+    
+}
+
+.drStrangePng3{
+    align-self:center;
+    position: fixed;
+    width: 70%;
+    opacity: 0;
+    /* opacity: 0.2; */
+    border-radius: 50%;
+    top: 60vh;
+    z-index: 1;
+
+    animation-name: drStrangePng;
+    animation-duration: 5s;
+    animation-delay: 5s;
+}
+
+.drStrangePng4{
+    align-self:center;
+    position: fixed;
+    width: 120%;
+    opacity: 0;
+    border-radius: 50%;
+    top: -3vh;
+    z-index: 1;
+
+    animation-name: drStrangePng4;
+    animation-duration: 4s;
+    animation-delay: 5s;
+}
+
+.drStrangePortal{
+    align-self:center;
+    position: fixed;
+    animation-name: portal;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-delay: 4s;
+    opacity: 0;
+
+    z-index: 2;
+    width: 100%;
+}
+
+@keyframes titleAct{
+    0%{
+        clip-path: circle(80% at 50% 50%);
+        width: 0%;
+        height: 0%;
+    }
+    10%{
+        clip-path: circle(100% at 50% 50%);
+        width: 60%;
+        height: 60%;
+    }
+
+    100%{
+        clip-path: circle(100% at 50% 50%);
+        width: 60%;
+        height: 60%;
+        opacity: 0;
+    }
+}
+
+@keyframes bgChange{
+    0%{
+        background-image: url('img/drstrange1.jpg');
+        background-size:100% 100%;
+
+    }
+    10%{
+        background-image: url('img/drstrange2.jpg');
+        background-size:100% 100%;
+    }
+
+    20%{
+        background-image: url('img/drstrange4.jpg');
+        background-size:100% 100%;
+
+    }
+    25%{
+        background-image: url('img/drstrange5.jpg');
+        background-size:100% 100%;
+
+    }
+    30%{
+        background-image: url('img/drstrange6.jpg');
+        background-size:100% 100%;
+
+    }
+    36%{
+        background-image: url('img/drstrange7.jpg');
+        background-size:100% 100%;
+
+    }
+    44%{
+        background-image: url('img/drstrange8.jpg');
+        background-size:100% 100%;
+
+    }
+    52%{
+        background-image: url('img/drstrange9.jpg');
+        background-size:100% 100%;
+
+    }
+    60%{
+        background-image: url('img/drstrange10.jpg');
+        background-size:100% 100%;
+    }
+
+    64%{
+        background-image: url('img/drstrange12.jpg');
+        background-size:100% 100%;
+    }
+    68%{
+        background-image: url('img/drstrange13.jpg');
+        background-size:100% 100%;
+    }
+    71%{
+        background-image: url('img/drstrange14.jpg');
+        background-size:100% 100%;
+    }
+    74%{
+        background-image: url('img/drstrange15.jpg');
+        background-size:100% 100%;
+    }
+    78%{
+        background-image: url('img/drstrange16.jpg');
+        background-size:100% 100%;
+    }
+    82%{
+        background-image: url('img/drstrange17.jpg');
+        background-size:100% 100%;
+    }
+    86%{
+        background-image: url('img/drstrange18.jpg');
+        background-size:100% 100%;
+        opacity: 1;
+    }
+
+    91%{
+        background-image: radial-gradient(#1b0200, black);
+        background-size:100% 100%;
+    }
+
+    100%{
+        background-image: radial-gradient(#1b0200, black);
+        background-size:100% 100%;
+    }
+
+}
+
+@keyframes drStrangePng{
+    0%{
+        opacity:0;
+    }
+    50%{
+        opacity:0.7;
+    }
+    100%{
+        opacity:0.1;
+    }
+}
+
+@keyframes drStrangePng4{
+    0%{
+        opacity:0;
+    }
+    50%{
+        opacity:0.2;
+    }
+    100%{
+        opacity:0;
+    }
+}
+
+@keyframes portal{
+    0%{
+        opacity:0;
+        width: 0%;
+        height: 0%;
+    }
+
+    10%{
+        width: 120%;
+        height: 200%;
+    }
+    20%{
+        opacity: 1;
+    }
+    100%{
+        transform: rotate(100000deg);
+        opacity: 1;
+        width: 120%;
+        height: 200%;
+    }
+}
+
+@keyframes author{
+    0%{
+        opacity:0;
+    }
+
+   5%{
+        
+        text-shadow: 5px 5px 2px #9f1107;
+    }
+    10%{
+        
+        text-shadow: 6px 6px 3px #9f1107;
+    }
+    15%{
+        text-shadow:7px 7px 5px #9f1107;
+    }
+    20%{
+        text-shadow: 8px 8px 8px #9f1107;
+    }
+    100%{
+        opacity:1;
+        text-shadow: 9px 9px 15px #9f1107;
+    }
+}
+
+@keyframes comingSoon{
+    0%{
+        opacity:0;
+    }
+    50%{
+        opacity:0.6;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+@font-face {
+    font-family: 'ververegular';
+    src: url('fonts/verve-webfont.woff2')
+
+}
+
+#author{
+    position: fixed;
+    font-size: 4rem;
+    color: aliceblue;
+    font-family: 'ververegular';
+    animation-name: author;
+    animation-duration: 7s;
+    animation-delay: 12s;
+    opacity: 0;
+    z-index: 3;
+}
+
+#comingSoon{
+    position: fixed;
+    bottom: 10vh;
+    font-size: 4rem;
+    color: #9f1107;
+    font-family: 'ververegular';
+    animation-name: comingSoon;
+    animation-duration: 3s;
+    animation-delay: 9.5s;
+    opacity: 0;
+    z-index: 3;
+
+    text-shadow:2px 2px white;
+
+}
